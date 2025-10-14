@@ -54,9 +54,10 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const socket = io({
-      path: "/api/socket"
-    });
+ const socket = io("https://tic-tac-socket.up.railway.app", {
+  transports: ["websocket"], // skip polling
+});
+
     socketRef.current = socket;
 
     socket.on("connect", () => {
