@@ -455,7 +455,7 @@ export default function Home() {
           </section>
 
           <footer className="pb-4 text-center text-xs text-slate-500">
-            Built with Next.js, Socket.IO, and Tailwind CSS.
+            Destiny games
           </footer>
         </div>
       </main>
