@@ -54,7 +54,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
- const socket = io("https://tic-tac-socket.up.railway.app", {
+ const socket = io("https://tic-tac-toe-three-azure-96.vercel.app", {
   transports: ["websocket"], // skip polling
 });
 
