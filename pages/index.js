@@ -54,10 +54,9 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
- const socket = io("https://tic-tac-toe-three-azure-96.vercel.app", {
-  transports: ["websocket"], // skip polling
-});
-
+    const socket = io({
+      path: "/api/socket"
+    });
     socketRef.current = socket;
 
     socket.on("connect", () => {
@@ -455,7 +454,7 @@ export default function Home() {
           </section>
 
           <footer className="pb-4 text-center text-xs text-slate-500">
-            Destiny games
+            Built with Next.js, Socket.IO, and Tailwind CSS.
           </footer>
         </div>
       </main>
